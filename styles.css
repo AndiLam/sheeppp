@@ -26,16 +26,17 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek kedalaman */
 }
 
-.logo {
+.logo a {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
+    text-decoration: none; /* Menghilangkan garis bawah */
 }
 
 .nav a {
     margin: 0 1rem;
     color: #333;
-    text-decoration: none;
+    text-decoration: none; /* Menghilangkan garis bawah pada link navigasi */
     font-weight: 500;
     transition: color 0.3s;
 }
