@@ -47,13 +47,14 @@ body {
 
 /* Show the menu when the nav is active */
 .nav.active {
-    display: block; /* Change to block to display the menu vertically */
-    position: absolute; /* Positioning the menu absolutely */
-    top: 60px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    background-color: white; /* Menu background */
-    padding: 1rem; /* Add padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Tampilkan saat tombol burger diklik */
+    flex-direction: column; /* Mengubah arah menjadi kolom */
+    width: 100%; /* Lebar penuh untuk menu */
+    background-color: white; /* Warna latar belakang menu */
+    position: absolute; /* Agar tidak mempengaruhi layout lain */
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    left: 0; /* Dari kiri */
+    z-index: 999; /* Agar di atas konten lain */
 }
 
 .nav a:hover {
@@ -273,10 +274,12 @@ body {
 /* Media Queries */
 @media (max-width: 768px) {
     .burger {
+        order: 2;
         display: flex; /* Show burger button in mobile */
     }
 
     .nav {
+        order: 1;
         display: none; /* Sembunyikan nav secara default */
         flex-direction: column;
         width: 100%;
