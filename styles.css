@@ -285,7 +285,7 @@ body {
         top: 60px; /* Sesuaikan dengan tinggi header */
         left: 0;
         z-index: 999;
-    }    }
+    }
 
     .nav.active {
         display: block; /* Show nav when active */
