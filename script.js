@@ -1,3 +1,8 @@
+document.getElementById('burger-button').addEventListener('click', function() {
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active'); // Toggle class active untuk nav
+});
+
 // Auto scroll to section
 document.querySelectorAll('.nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
