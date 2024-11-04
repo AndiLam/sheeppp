@@ -1,22 +1,20 @@
-document.getElementById('burger-button').addEventListener('click', function() {
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('active'); // Toggle class active untuk nav
-});
+// Handle hamburger menu click
+const burger = document.getElementById('burger-button');
+const nav = document.getElementById('nav');
 
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active'); // Menambahkan atau menghapus kelas 'active' pada nav
+burger.addEventListener('click', function() {
+    nav.classList.toggle('active'); // Toggle class active for nav
 });
 
 // Auto scroll to section
 document.querySelectorAll('.nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
 
+        // Scroll to the target section smoothly
         targetSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
