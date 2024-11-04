@@ -272,23 +272,16 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .burger {
+        display: flex; /* Show burger button in mobile */
+    }
+
     .nav {
         display: none; /* Sembunyikan nav di mobile */
-        flex-direction: column; /* Tambahkan agar menu dalam satu kolom */
-        position: absolute; /* Agar bisa ditampilkan di atas */
-        right: 0; /* Tempatkan di sebelah kanan */
-        background-color: #fff; /* Warna latar belakang untuk nav */
-        width: 200px; /* Atur lebar menu */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 999; /* Pastikan di atas konten lain */
     }
 
     .nav.active {
         display: block; /* Show nav when active */
-    }
-
-    .burger {
-        display: flex; /* Show burger button in mobile */
     }
 
     .header {
