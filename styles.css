@@ -52,6 +52,7 @@ body {
     flex-direction: column; /* Change to column for vertical alignment */
     position: absolute; /* Positioning the menu absolutely */
     top: 60px; /* Adjust this based on your header height */
+    right: 20px; /* Adjust as needed */
     right: 0; /* Align to the right */
     background-color: white; /* Menu background */
     padding: 1rem; /* Add padding */
