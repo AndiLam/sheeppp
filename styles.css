@@ -1,0 +1,279 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #fdfdfd;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.nav a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #4A90E2;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('img/sheep1.jpg') center/cover no-repeat;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffd700;
+    border-radius: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+    color: #222;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 1rem;
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-item {
+    max-width: 300px;
+    background-color: #f0f8ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Sheep Types Section */
+.sheep-types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+    background-color: #f8f8f8;
+}
+
+.sheep-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom dengan proporsi yang sama */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sheep-image {
+    width: 100%; /* Gambar responsif */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Crop gambar jika perlu */
+    max-height: 80vh; /* Batasi tinggi gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sheep-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Susun teks secara vertikal */
+}
+
+.sheep-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sheep-info p {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.sheep-info h4 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.sheep-info ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 5rem 1rem;
+    background-color: #fff;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for gallery images */
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Membesar sedikit */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat */
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 1rem;
+    background-color: #f8f8f8;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.contact-link {
+    font-size: 1.25rem;
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: #357ABD;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
