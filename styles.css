@@ -64,19 +64,21 @@ body {
 
 /* Burger button styles */
 .burger {
-    display: none; /* Hide by default */
+    display: flex; /* Show burger button in mobile */
     flex-direction: column;
     cursor: pointer;
     background: transparent;
     border: none;
     padding: 0;
+    margin-left: auto; /* Pushes the burger to the right */
 }
 
+/* Burger lines styling */
 .burger-line {
     width: 25px;
     height: 3px;
     background-color: #333;
-    margin: 4px 0;
+    margin: 4px 0; /* Space between burger lines */
     transition: all 0.3s ease;
 }
 
