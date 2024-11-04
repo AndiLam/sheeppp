@@ -280,7 +280,15 @@ body {
     }
 
     .nav {
+        order: 1;
         display: none; /* Sembunyikan nav secara default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header */
+        left: 0;
+        z-index: 999;
     }
 
     .nav.active {
