@@ -33,8 +33,24 @@ body {
     text-decoration: none; /* Menghilangkan garis bawah */
 }
 
+.nav {
+    order: 1; /* Menempatkan menu navigasi di sebelah kiri */
+    display: none; /* Sembunyikan secara default */
+}
+
+.nav.active {
+    display: flex; /* Tampilkan saat tombol burger diklik */
+    flex-direction: column; /* Mengubah arah menjadi kolom */
+    width: 100%; /* Lebar penuh untuk menu */
+    background-color: white; /* Warna latar belakang menu */
+    position: absolute; /* Agar tidak mempengaruhi layout lain */
+    top: 60px; /* Sesuaikan dengan tinggi header */
+    left: 0; /* Dari kiri */
+    z-index: 999; /* Agar di atas konten lain */
+}
+
 .nav a {
-    margin: 0 1rem;
+    margin: 0.5rem 0;
     color: #333;
     text-decoration: none;
     font-weight: 500;
@@ -47,12 +63,13 @@ body {
 
 /* Burger button styles */
 .burger {
-    display: none; /* Sembunyikan tombol burger secara default */
+    display: flex; /* Tampilkan tombol burger */
     flex-direction: column;
     cursor: pointer;
     background: transparent;
     border: none;
     padding: 0;
+    order: 2; /* Menempatkan tombol burger di sebelah kanan */
 }
 
 .burger-line {
@@ -257,6 +274,18 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .nav {
+        display: none; /* Sembunyikan nav secara default */
+    }
+
+    .nav.active {
+        display: flex; /* Tampilkan nav ketika tombol burger di-click */
+    }
+
+    .burger {
+        display: flex; /* Tampilkan tombol burger */
+    }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -264,17 +293,6 @@ body {
 
     .logo {
         font-size: 1.25rem;
-    }
-
-    .nav {
-        margin-top: 1rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav a {
-        margin: 0.5rem 0;
     }
 
     .hero h1 {
