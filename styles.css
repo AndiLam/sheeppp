@@ -19,7 +19,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #fff;
+    background-color: #fff; /* Warna latar belakang */
+    position: sticky; /* Membuat header tetap di atas saat menggulir */
+    top: 0; /* Memastikan header berada di bagian atas */
+    z-index: 1000; /* Memastikan header berada di atas elemen lain */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek kedalaman */
 }
 
 .logo {
@@ -37,7 +41,7 @@ body {
 }
 
 .nav a:hover {
-    color: #4A90E2;
+    color: #4A90E2; /* Warna saat hover */
 }
 
 /* Hero Section */
