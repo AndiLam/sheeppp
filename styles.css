@@ -34,7 +34,7 @@ body {
 }
 
 .nav {
-    display: flex; /* Tampilkan nav secara default */
+    display: flex;
 }
 
 .nav a {
@@ -45,13 +45,24 @@ body {
     transition: color 0.3s;
 }
 
+/* Show the menu when the nav is active */
+.nav.active {
+    display: block; /* Change to block to display the menu vertically */
+    position: absolute; /* Positioning the menu absolutely */
+    top: 60px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: white; /* Menu background */
+    padding: 1rem; /* Add padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .nav a:hover {
     color: #4A90E2;
 }
 
 /* Burger button styles */
 .burger {
-    display: none; /* Sembunyikan tombol burger secara default */
+    display: none; /* Hide by default */
     flex-direction: column;
     cursor: pointer;
     background: transparent;
@@ -267,18 +278,17 @@ body {
         position: absolute; /* Agar bisa ditampilkan di atas */
         right: 0; /* Tempatkan di sebelah kanan */
         background-color: #fff; /* Warna latar belakang untuk nav */
-        top: 60px; /* Tempatkan di bawah header */
         width: 200px; /* Atur lebar menu */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 999; /* Pastikan di atas konten lain */
     }
 
     .nav.active {
-        display: flex; /* Tampilkan menu saat active */
+        display: block; /* Show nav when active */
     }
 
     .burger {
-        display: flex; /* Tampilkan tombol burger di mobile */
+        display: flex; /* Show burger button in mobile */
     }
 
     .header {
